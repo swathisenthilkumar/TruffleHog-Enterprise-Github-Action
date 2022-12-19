@@ -17,10 +17,8 @@ jobs:
       - name: TruffleHog Enterprise scan
         uses: swathisenthilkumar/TruffleHog-Enterprise-Github-Action@main
         with:
-          scanArguments: "--regex --entropy=False --max_depth=5  --only-verified --json-legacy  < myoutput/results.json" 
-          output_path: myoutput/
-          output_formats: json
-          ignore_on_exit: results
+          scanArguments: "--regex --entropy=False --max_depth=5  --only-verified --json  < results.json" 
+     
           enable_comments: true
       - run: ls -la && ls -la myoutput
         if: always()
@@ -28,5 +26,5 @@ jobs:
       - name: Use the Upload Artifact GitHub Action
         uses: actions/upload-artifact@v2
         with:
-           name: results.json
-           path: myoutput/results.json
+           name: results
+           path: results.json
