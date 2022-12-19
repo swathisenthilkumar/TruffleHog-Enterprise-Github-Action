@@ -17,7 +17,7 @@ jobs:
       - name: TruffleHog Enterprise scan
         uses: swathisenthilkumar/TruffleHog-Enterprise-Github-Action@main
         with:
-          scanArguments: "--regex --entropy=False --max_depth=5 --quiet --json < myoutput/results.json" 
+          scanArguments: "--regex --entropy=False --max_depth=5 --quiet --only-verified --json < myoutput/results.json" 
           output_path: myoutput/
           output_formats: json
           ignore_on_exit: results
