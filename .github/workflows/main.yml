@@ -14,5 +14,5 @@ jobs:
       - name: TruffleHog Enterprise scan
         uses: swathisenthilkumar/TruffleHog-Enterprise-Github-Action@main
         with:
-          scanArguments: "--regex --entropy=False --max_depth=5 --quiet" 
+          scanArguments: "--regex --entropy=False --max_depth=5 --quiet --json" 
          
