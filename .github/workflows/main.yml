@@ -25,5 +25,5 @@ jobs:
       - name: Use the Upload Artifact GitHub Action
         uses: actions/upload-artifact@v2
         with:
-           name: results.sarif
+           name: results.json
            path: myoutput/results.json
