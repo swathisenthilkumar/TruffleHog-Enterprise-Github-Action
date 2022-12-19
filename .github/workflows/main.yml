@@ -9,6 +9,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - run: mkdir -p myoutput
+      - name: trufflehog integration
+        uses: ./
         with:
           fetch-depth: 0 # fetch all history so multiple commits can be scanned
       - name: TruffleHog Enterprise scan
