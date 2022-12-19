@@ -14,4 +14,5 @@ jobs:
       - name: TruffleHog Enterprise scan
         uses: swathisenthilkumar/TruffleHog-Enterprise-Github-Action@main
         with:
-            args: --fail-verified ${{ github.event.repository.default_branch }} HEAD --quiet
+          scanArguments: "--regex --entropy=False --max_depth=5 --rules /regexes.json --quiet" 
+         
